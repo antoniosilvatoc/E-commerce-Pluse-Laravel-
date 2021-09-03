@@ -223,7 +223,7 @@ class Product extends Model
         if ($this->attributes['off_price'] == null) {
             $this->attributes['off_price'] = 0;
         }
-        return number_format($this->attributes['sale_price'] - $this->attributes['off_price']);
+        return number_format($this->attributes['sale_price'] - $this->attributes['off_price'], '2', ',', '.');
     }
 
     public function getSalePriceAttribute($value)
@@ -295,9 +295,8 @@ class Product extends Model
         return array('product_name' => $array['product_name'], 'product_slug' => $array['product_slug']);
     }
 
-    private function convertStringToDouble($param)
-    {
-      if (empty($param)){
+    private function convertStringToDouble($valor) {
+      if (empty($valor)){
           return null;
       }
       return str_replace(',', '.', str_replace('.', '', $param));

@@ -53,12 +53,12 @@
             <div class="col-xs-3">
                <label class=" control-label no-padding-right" for="sale_price"> Preço de Venda </label>
                <input placeholder="Preço de Venda" name="sale_price" value="{{ old('sale_price',$product->sale_price) }}"
-                      id="sale_price" class="form-control" min="0" type="number">
+                      id="sale_price" class="form-control" min="0" step="0.01" type="number">
             </div>
             <div class="col-xs-3">
                <label class=" control-label no-padding-right" for="buy_price"> Preço de Custo </label>
                <input placeholder="Preço de Custo" name="buy_price" value="{{ old('buy_price',$product->buy_price) }}"
-                      id="buy_price" class="form-control" min="0" type="number">
+                      id="buy_price" class="form-control" step="0.01" min="0" type="number">
             </div>
             <div class="col-xs-3">
                <label for="quantity">Quantidade</label>
@@ -100,7 +100,7 @@
                <div class="div-discount">
                   <label for="off_price"><b>Valor do desconto</b></label>
                   <input id="off_price" name="off_price" class="form-control" min="0"
-                         value="{{ old('off_price',$product->off_price) }}" type="number">
+                         value="{{ old('off_price',$product->off_price) }}" step="0.01" type="number">
                </div>
             </div>
          </div>

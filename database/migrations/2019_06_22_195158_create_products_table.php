@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('sku')->unique();
                 //create a column for available or unavailable, and default is active
             $table->boolean('status')->default(1);
-                 //if product is unavailable then an available data comes
+            // se o produto não estiver disponível, então um dado disponível vem
             $table->date('data_available')->nullable();
             $table->boolean('is_off')->default(0);
             $table->integer('off_price')->default(0);

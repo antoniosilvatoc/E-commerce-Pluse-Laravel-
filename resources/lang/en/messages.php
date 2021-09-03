@@ -7,7 +7,7 @@ return [
     'saved' => 'has created successfully',
     'savedFailed' => 'could not create , error ',
 
-    'edited' => 'has update successfully',
+    'edited' => 'Produto tualizado com sucesso',
     'editedFailed' => 'could not update , error ',
 
     'deleted' => 'has deleted successfully',
